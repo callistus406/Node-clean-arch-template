@@ -1,0 +1,8 @@
+Event Handling:
+
+It contains code related to the handling of events that occur within your application.
+Events can represent important state changes, actions, or occurrences, and the "events" folder is where you define how your application responds to these events.
+Event Dispatching:
+
+It includes logic for dispatching events when certain conditions are met or actions are performed in your application.
+Dispatching events allows different parts of your application to respond to those events asynchronously.

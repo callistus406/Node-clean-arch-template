@@ -1,0 +1,22 @@
+// UserDto.js
+class UserDto {
+    constructor({ id, name, email }) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        // Exclude sensitive data
+    }
+}
+
+module.exports = UserDto;
+// UserController.js
+const GetUserUseCase = require('../application/use_cases/GetUserUseCase');
+const UserDto = require('../dtos/UserDto');
+
+class UserController {
+    async getUser(req, res) {
+        const userDto = new UserDto(req.body);
+        const user = await GetUserUseCase.execute(userDto);
+        res.json(user);
+    }
+}
